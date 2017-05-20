@@ -1,0 +1,57 @@
+<form>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input id="name" type="text" [(ngModel)]="operator.name" placeholder="Joe Bloggs" name="name"/>
+            </div>
+            <div class="form-group">
+                <label for="location">Location*</label>
+                <input id="location" type="text" [(ngModel)]="operator.location" placeholder="London" name="location"/>
+            </div>
+            <div class="form-group">
+                <label>Schedule*</label>
+                <label for="every_day">
+                    <input type="radio" [(ngModel)]="operator.schedule" id="every_day" name="schedule"/>
+                    Every day
+                </label>
+                <label for="every_work_day">
+                    <input type="radio" [(ngModel)]="operator.schedule" id="every_work_day" name="schedule"/>
+                    Every work day
+                </label>
+                <label for="selected_days">
+                    <input type="radio" [(ngModel)]="operator.schedule" id="selected_days" name="schedule"/>
+                    Select days
+                </label>
+                <label for="select_a_period">
+                    <input type="radio" [(ngModel)]="operator.schedule" id="select_a_period" name="schedule"/>
+                    Select a period
+                </label>
+                <label for="none">
+                    <input type="radio" [(ngModel)]="operator.schedule" id="none" name="schedule"/>
+                    None
+                </label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phone">Phone number*</label>
+                <input id="phone" type="text" [(ngModel)]="operator.phone" placeholder="+448900000898" name="phone"/>
+            </div>
+            <div class="form-group">
+                <label for="timezone">Timezone*</label>
+                <input id="timezone" type="text" [(ngModel)]="operator.timezone" placeholder="Europe/London"
+                       name="timezone"/>
+            </div>
+            <div class="form-group">
+                <label for="from">From*</label>
+                <input id="from" type="text" [(ngModel)]="operator.from" placeholder="09:00" name="from"/>
+            </div>
+            <div class="form-group">
+                <label for="to">To*</label>
+                <input id="to" type="text" [(ngModel)]="operator.to" placeholder="17:00" name="to"/>
+            </div>
+            <button class="btn-block" (click)="addOperator()">Save</button>
+        </div>
+    </div>
+</form>
